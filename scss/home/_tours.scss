@@ -1,0 +1,212 @@
+.tours-section {
+  padding-bottom: 4.8rem;
+  padding-top: 4.8rem;
+  .tours-touch {
+    position: relative;
+  }
+  .title-default {
+    margin-bottom: 3.2rem;
+    p {
+      font-family: "Playfair Display", serif;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 28px;
+      margin-bottom: 0;
+    }
+  }
+  .title-center {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tours-cursor {
+    width: 15.2rem;
+    height: 15.2rem;
+    border-radius: 50%;
+    border: 1px solid #101110;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    right: 55vw;
+    z-index: 4;
+    top: -6rem;
+    transition: all 0.4s ease-in-out;
+    &.hide {
+      opacity: 0;
+      visibility: hidden;
+    }
+    p {
+      font-size: 1.3rem;
+      font-weight: 400;
+      line-height: 1.6rem;
+      letter-spacing: 0.26px;
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+  }
+  .tours-wrapper {
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    cursor: pointer;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    scroll-behavior: smooth;
+    z-index: 2;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &.active {
+      background: rgba(255, 255, 255, 0.3);
+      cursor: grabbing;
+      cursor: -webkit-grabbing;
+      transform: scale(1);
+    }
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    .tours-wrapper-inner {
+      display: grid;
+      gap: 2rem;
+      grid-auto-flow: column;
+      transition: all 0.2s;
+      will-change: transform;
+      user-select: none;
+      cursor: pointer;
+      &.active {
+        cursor: grabbing;
+        cursor: -webkit-grabbing;
+      }
+      article {
+        width: 23.4rem;
+
+        .tours-image {
+          display: flex;
+          margin-bottom: 1.6rem;
+          height: 43rem;
+          align-items: flex-end;
+
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            transition: all 0.4s ease-in-out;
+            object-fit: cover;
+          }
+        }
+
+        h4 {
+          margin-bottom: 0.8rem;
+          span {
+            display: inline-block;
+            width: 85%;
+          }
+          img {
+            transition: all 0.4s ease-in-out;
+          }
+          a {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+          }
+        }
+
+        &:hover {
+          h4 {
+            img {
+              transform: translateX(-1.6rem);
+            }
+          }
+        }
+        p {
+          font-size: 1.3rem;
+          font-weight: 400;
+          line-height: 1.6rem;
+          letter-spacing: 0.26px;
+          text-transform: uppercase;
+          color: #666;
+        }
+        &:nth-child(2n + 2) {
+          .tours-image {
+            img {
+              height: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 48.0625em) {
+  /*769px*/
+  .tours-section {
+    padding-bottom: 9.6rem;
+    padding-top: 6.4rem;
+    .tours-cursor {
+      display: flex;
+    }
+    .title-default {
+      margin-bottom: 4.4rem;
+    }
+    .tours-wrapper {
+      overflow-x: hidden;
+      padding-left: 3.6rem;
+      padding-bottom: 7.2rem;
+      .tours-wrapper-inner {
+        article {
+          width: 36.4rem;
+          .tours-image {
+            height: 62rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 80.0625em) {
+  /*1281px*/
+  .tours-section {
+    padding-bottom: 12rem;
+    padding-top: 9.6rem;
+    .title-default {
+      margin-bottom: 9.6rem;
+    }
+    .tours-wrapper {
+      padding-left: 15.4rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 90.0625em) {
+  /*1441px*/
+  .tours-section {
+    .tours-wrapper {
+      padding-left: 19.5vw;
+    }
+  }
+}
+
+.title-center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title-default {
+  margin-bottom: 6.2rem;
+}
+
+.title-default p {
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 28px;
+  margin-bottom: 0;
+}

@@ -1,0 +1,47 @@
+@import "./home/_intro";
+@import "./home/_feature";
+@import "./home/_tours";
+
+.testimonials-slider {
+  max-width: 94rem;
+  width: 100%;
+  margin: 0 auto;
+  background-image: url(../img/quote.svg);
+  height: 410px;
+  position: relative;
+
+  .testimonial-slide {
+    position: absolute;
+    height: 410px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    &.active {
+      opacity: 1;
+    }
+  }
+}
+
+.custom-next {
+  background-image: url(../img/next.svg);
+  &:hover {
+    background-image: url(../img/next-hover.svg);
+  }
+}
+.custom-prev {
+  background-image: url(../img/prev.svg);
+  &:hover {
+    background-image: url(../img/prev-hover.svg);
+  }
+}
+@media only screen and (min-width: 48.0625em) {
+  /*769px*/
+  .feature-section {
+    padding: 9.6rem 0 6.4rem 0;
+  }
+}
+
+@media only screen and (min-width: 80.0625em) {
+  .feature-section {
+    padding: 14.4rem 0 9.6rem 0;
+  }
+}
